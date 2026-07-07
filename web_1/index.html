@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Página web personal de Iris Chacón Romero — Desarrolladora Full Stack Junior en formación. Código, aprendizaje continuo y soluciones digitales." />
+  <title>Iris Chacón Romero | Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">ICR</a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link">Sobre mí</a>
+        <a href="#services" class="nav-link">Servicios</a>
+        <a href="#projects" class="nav-link">Proyectos</a>
+        <a href="#contact" class="nav-link">Contacto</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-orb orb-1"></div>
+    <div class="hero-bg-orb orb-2"></div>
+    <div class="hero-bg-orb orb-3"></div>
+
+    <!-- Decorative orbit ring -->
+    <div class="orbit-ring" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-avatar-wrapper">
+        <img src="avatar.jpg" alt="Iris Chacón Romero" class="hero-avatar-img" />
+      </div>
+      <div class="hero-badge">🚀 Full Stack Developer en formación · Máster en curso</div>
+      <h1 class="hero-name">
+        Iris <span class="gradient-text">Chacón Romero</span>
+      </h1>
+      <p class="hero-tagline">
+        Desarrolladora Full Stack Junior 💻<br />
+        Apasionada del código, el aprendizaje continuo y la creación de soluciones digitales.
+      </p>
+
+      <!-- Animated tech chips -->
+      <div class="hero-chips">
+        <span class="chip chip-1">🐍 Python</span>
+        <span class="chip chip-2">🌐 HTML & CSS</span>
+        <span class="chip chip-3">⚡ JavaScript</span>
+        <span class="chip chip-4">🗄️ SQL</span>
+        <span class="chip chip-5">🤖 IA</span>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary" id="btn-ver-proyectos">Ver proyectos</a>
+        <a href="#contact" class="btn btn-ghost" id="btn-contactar">Contactar</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-label">— Sobre mí</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">Hola, soy Iris 👋</h2>
+          <p class="about-description">
+            Soy una apasionada del código, el aprendizaje continuo y la creación de soluciones digitales.
+            Actualmente estoy inmersa en un <strong>Máster de Desarrollo Full Stack</strong>, y este espacio
+            es el reflejo de mi evolución, proyectos y dedicación.
+          </p>
+          <p class="about-description">
+            Mi objetivo es mostrar no solo los resultados finales, sino también <strong>mi proceso de aprendizaje</strong>:
+            los errores que cometo, soluciono y cómo voy creciendo como desarrolladora cada semana.
+          </p>
+
+          <!-- Barra de progreso Máster -->
+          <div class="progress-block">
+            <div class="progress-header">
+              <span class="progress-label">📊 Progreso en el Máster</span>
+              <span class="progress-percent">40%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" style="width: 40%"></div>
+            </div>
+            <p class="progress-note">⬤⬤⬤⬤⬤⬤⬤◯◯◯ Sigo avanzando cada semana</p>
+          </div>
+
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">7</span>
+              <span class="stat-label">Módulos completados</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">40%</span>
+              <span class="stat-label">Del Máster superado</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Compromiso</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="about-avatar">
+            <img src="avatar.jpg" alt="Iris Chacón Romero" class="about-avatar-img" />
+          </div>
+          <div class="skills-list">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">HTML &amp; CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Git &amp; GitHub</span>
+            <span class="skill-tag">Linux / Terminal</span>
+            <span class="skill-tag">IA &amp; Antigravity</span>
+            <span class="skill-tag">React (próximamente)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-label">— Servicios</div>
+      <h2 class="section-title centered">Lo que estoy dominando</h2>
+      <div class="services-grid">
+
+        <div class="service-card" id="service-frontend">
+          <div class="service-icon">🖥️</div>
+          <h3 class="service-title">Frontend</h3>
+          <p class="service-desc">
+            Desarrollo de interfaces web con HTML, CSS y JavaScript aplicando buenas prácticas,
+            diseño responsive y accesibilidad.
+          </p>
+        </div>
+
+        <div class="service-card" id="service-backend">
+          <div class="service-icon">🐍</div>
+          <h3 class="service-title">Backend & Bases de Datos</h3>
+          <p class="service-desc">
+            Python para lógica de negocio y automatizaciones. SQL para gestión
+            y consulta de bases de datos relacionales.
+          </p>
+        </div>
+
+        <div class="service-card" id="service-devops">
+          <div class="service-icon">🐙</div>
+          <h3 class="service-title">Git, Linux & DevOps</h3>
+          <p class="service-desc">
+            Control de versiones con Git &amp; GitHub, manejo de la terminal Linux
+            e integración continua y despliegue en la nube.
+          </p>
+        </div>
+
+        <div class="service-card" id="service-ia">
+          <div class="service-icon">🤖</div>
+          <h3 class="service-title">IA & Automatización</h3>
+          <p class="service-desc">
+            Uso de herramientas de IA como Google Antigravity IDE para construir
+            agentes, automatizaciones y soluciones inteligentes.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-label">— Proyectos</div>
+      <h2 class="section-title centered">Lo que estoy construyendo</h2>
+      <div class="projects-grid">
+
+        <article class="project-card" id="project-crm">
+          <div class="project-image" style="--grad: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <div class="project-overlay">
+              <span class="project-tag">✅ Completado</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">CRM Kanban</h3>
+            <p class="project-desc">Primer CRM desarrollado con Antigravity IDE. Sistema de gestión con tablero Kanban interactivo. En proceso de despliegue en la nube.</p>
+          </div>
+        </article>
+
+        <article class="project-card" id="project-web">
+          <div class="project-image" style="--grad: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+            <div class="project-overlay">
+              <span class="project-tag">🔄 En progreso</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Web Personal</h3>
+            <p class="project-desc">Sitio web personal que documenta mi evolución como desarrolladora: proyectos, aprendizajes y despliegue continuo en la nube.</p>
+          </div>
+        </article>
+
+        <article class="project-card" id="project-master">
+          <div class="project-image" style="--grad: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+            <div class="project-overlay">
+              <span class="project-tag">📚 Máster</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Proyectos del Máster Full Stack</h3>
+            <p class="project-desc">Colección de proyectos desarrollados durante el Máster: Python, SQL, Linux, Git, IA y próximamente React &amp; Backend.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / SOCIAL ===== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-label">— Contacto</div>
+      <h2 class="section-title centered">Hablemos</h2>
+      <p class="contact-subtitle">
+        ¿Tienes un proyecto en mente? Me encantaría escucharte.<br />
+        Escríbeme y empecemos a crear algo increíble.
+      </p>
+
+      <div class="social-buttons">
+        <a href="mailto:hola@irischaconromero.com" class="social-btn email" id="btn-email" aria-label="Email">
+          <span class="social-icon">✉️</span>
+          <span class="social-label">Email</span>
+        </a>
+        <a href="https://www.linkedin.com/in/irischaconromero" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" id="btn-linkedin" aria-label="LinkedIn">
+          <span class="social-icon">💼</span>
+          <span class="social-label">LinkedIn</span>
+        </a>
+        <a href="https://github.com/IrisChaConRomero" target="_blank" rel="noopener noreferrer" class="social-btn github" id="btn-github" aria-label="GitHub">
+          <img src="https://avatars.githubusercontent.com/u/258068472?v=4" alt="GitHub Avatar" class="social-avatar" />
+          <span class="social-label">GitHub</span>
+        </a>
+        <a href="https://instagram.com/irischaconromero" target="_blank" rel="noopener noreferrer" class="social-btn instagram" id="btn-instagram" aria-label="Instagram">
+          <span class="social-icon">📸</span>
+          <span class="social-label">Instagram</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">
+        © 2026 Iris Chacón Romero · Hecho con 💜 y mucho café
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
