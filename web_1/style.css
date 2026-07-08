@@ -644,8 +644,8 @@ ul  { list-style: none; }
 /* About card — Apple wallpaper style background */
 .about-card {
   background:
-    linear-gradient(180deg, rgba(20,10,40,0.35) 0%, rgba(30,10,60,0.55) 100%),
-    url('about_card_bg.png') center center / cover no-repeat;
+    linear-gradient(180deg, rgba(10,5,30,0.42) 0%, rgba(25,8,55,0.58) 100%),
+    url('about_card_bg.png') center center / 100% 100% no-repeat;
   border: 1.5px solid rgba(180, 150, 255, 0.3);
   border-radius: var(--radius-lg);
   padding: 3rem 2.2rem;
