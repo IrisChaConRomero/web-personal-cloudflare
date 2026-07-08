@@ -641,9 +641,11 @@ ul  { list-style: none; }
   letter-spacing: 0.03em;
 }
 
-/* About card — dark gradient más claro */
+/* About card — Apple wallpaper style background */
 .about-card {
-  background: linear-gradient(145deg, #2e2a45 0%, #38324f 55%, #302c46 100%);
+  background:
+    linear-gradient(180deg, rgba(20,10,40,0.35) 0%, rgba(30,10,60,0.55) 100%),
+    url('about_card_bg.png') center center / cover no-repeat;
   border: 1.5px solid rgba(180, 150, 255, 0.3);
   border-radius: var(--radius-lg);
   padding: 3rem 2.2rem;
@@ -652,30 +654,30 @@ ul  { list-style: none; }
   align-items: center;
   gap: 2rem;
   box-shadow:
-    0 4px 24px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 4px 32px rgba(0, 0, 60, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
   position: relative;
   overflow: hidden;
 }
 
-/* Lilac glow top-left */
+/* Cyan bokeh subtle highlight top */
 .about-card::before {
   content: '';
   position: absolute;
-  top: -50px; left: -50px;
-  width: 220px; height: 220px;
-  background: radial-gradient(circle, rgba(200, 170, 255, 0.22) 0%, transparent 70%);
+  top: -30px; right: -30px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(100, 220, 255, 0.15) 0%, transparent 70%);
   pointer-events: none;
   border-radius: 50%;
 }
 
-/* Pink glow bottom-right */
+/* Magenta glow bottom */
 .about-card::after {
   content: '';
   position: absolute;
-  bottom: -40px; right: -40px;
-  width: 180px; height: 180px;
-  background: radial-gradient(circle, rgba(255, 150, 200, 0.16) 0%, transparent 70%);
+  bottom: -30px; left: 20%;
+  width: 160px; height: 160px;
+  background: radial-gradient(circle, rgba(200, 50, 200, 0.18) 0%, transparent 70%);
   pointer-events: none;
   border-radius: 50%;
 }
