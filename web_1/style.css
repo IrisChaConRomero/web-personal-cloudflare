@@ -1049,10 +1049,17 @@ ul  { list-style: none; }
   background: var(--bg-surface);
 }
 
+/* Override container width for projects — full page width */
+.projects .container {
+  width: min(100% - 3rem, 1600px);
+  max-width: none;
+}
+
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
 }
 
 .project-card {
@@ -1064,6 +1071,8 @@ ul  { list-style: none; }
   box-shadow: var(--shadow-card);
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -1074,13 +1083,13 @@ ul  { list-style: none; }
 
 /* Visual banner — tall and dramatic */
 .project-image {
-  height: 240px;
+  height: 230px;
   background: var(--grad);
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 2rem;
+  padding: 1.8rem;
   overflow: hidden;
 }
 
@@ -1119,7 +1128,7 @@ ul  { list-style: none; }
 /* Big project name overlaid on gradient */
 .project-visual-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.3rem, 2.8vw, 2rem);
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
   font-weight: 800;
   color: #fff;
   line-height: 1.15;
@@ -1168,10 +1177,10 @@ ul  { list-style: none; }
   border: 1px solid rgba(255,255,255,0.3);
   color: rgba(255,255,255,0.9);
   font-family: var(--font-body);
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
-  padding: 0.2rem 0.6rem;
+  letter-spacing: 0.04em;
+  padding: 0.25rem 0.75rem;
   border-radius: var(--radius-pill);
 }
 
@@ -1181,18 +1190,25 @@ ul  { list-style: none; }
   position: relative;
   z-index: 1;
   background: var(--bg-card);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
 }
 
 .project-title {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: var(--text-primary);
   margin-bottom: 0.6rem;
+  text-align: center;
+  min-height: 3.2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
+  justify-content: center;
+  width: 100%;
 }
 
 .project-title-arrow {
@@ -1208,9 +1224,11 @@ ul  { list-style: none; }
 
 .project-desc {
   font-family: var(--font-body);
-  font-size: 0.87rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
   line-height: 1.8;
+  text-align: center;
+  flex: 1;
 }
 
 /* ============================================================
@@ -1386,6 +1404,7 @@ ul  { list-style: none; }
   .about-card { order: -1; }
   .about-stats { gap: 1.5rem; }
   .services-grid { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
 
   .social-buttons { flex-direction: row; gap: 1.2rem; }
   .social-btn { width: 64px; height: 64px; }
