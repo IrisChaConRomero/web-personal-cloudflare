@@ -379,15 +379,19 @@ ul  { list-style: none; }
 }
 
 .orbit-ring::before {
-  content: '🌟';
+  content: '🔧';
   position: absolute;
   top: -14px; left: 50%;
   margin-left: -12px;
   font-size: 1.4rem;
-  animation: orbitSpin 40s linear infinite reverse;
 }
 
 @keyframes orbitSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes selfSpin {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
@@ -422,6 +426,26 @@ ul  { list-style: none; }
   transform: translateY(-3px) scale(1.05);
 }
 
+/* SVG icons inside chips */
+.chip-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  vertical-align: middle;
+  flex-shrink: 0;
+  display: inline-block;
+  margin-right: 0.25rem;
+  transition: transform var(--transition);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+}
+
+.chip:hover .chip-icon {
+  transform: scale(1.2) rotate(-5deg);
+}
+
 .chip-1 { animation-delay: 0.7s; }
 .chip-2 { animation-delay: 0.85s; }
 .chip-3 { animation-delay: 1.0s; }
@@ -431,6 +455,19 @@ ul  { list-style: none; }
 @keyframes chipPop {
   from { opacity: 0; transform: translateY(10px) scale(0.92); }
   to   { opacity: 1; transform: translateY(0)    scale(1); }
+}
+
+/* Larger emoji inside chip (IA robot) */
+.chip-emoji-lg {
+  font-size: 1.15rem;
+  line-height: 1;
+  margin-right: 0.3rem;
+  display: inline-block;
+  transition: transform var(--transition);
+}
+
+.chip:hover .chip-emoji-lg {
+  transform: scale(1.25) rotate(-5deg);
 }
 
 /* ---------- Buttons ---------- */
@@ -604,36 +641,54 @@ ul  { list-style: none; }
   letter-spacing: 0.03em;
 }
 
-/* About card */
+/* About card — dark gradient más claro */
 .about-card {
-  background: var(--bg-card);
-  border: 1.5px solid var(--border);
+  background: linear-gradient(145deg, #2e2a45 0%, #38324f 55%, #302c46 100%);
+  border: 1.5px solid rgba(180, 150, 255, 0.3);
   border-radius: var(--radius-lg);
   padding: 3rem 2.2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  box-shadow: var(--shadow-card);
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
 }
 
+/* Lilac glow top-left */
 .about-card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent-coral), var(--accent-violet), var(--accent-blue));
+  top: -50px; left: -50px;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(200, 170, 255, 0.22) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+/* Pink glow bottom-right */
+.about-card::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; right: -40px;
+  width: 180px; height: 180px;
+  background: radial-gradient(circle, rgba(255, 150, 200, 0.16) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
 }
 
 .about-avatar {
   width: 148px; height: 148px;
   border-radius: 50%;
-  border: 3px solid var(--text-primary);
-  box-shadow: 0 0 0 6px rgba(26,24,20,0.07), var(--shadow-card);
+  border: 3px solid rgba(167, 139, 250, 0.6);
+  box-shadow: 0 0 0 6px rgba(167,139,250,0.12), 0 8px 32px rgba(0,0,0,0.4);
   overflow: hidden;
   flex-shrink: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .about-avatar-img {
@@ -652,26 +707,32 @@ ul  { list-style: none; }
 }
 
 .skill-tag {
-  background: rgba(26,24,20,0.06);
-  border: 1.5px solid var(--border-dark);
-  color: var(--text-secondary);
+  background: rgba(220, 200, 255, 0.15);
+  border: 1.5px solid rgba(220, 200, 255, 0.35);
+  color: #ede0ff;
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 500;
   padding: 0.38rem 0.9rem;
   border-radius: var(--radius-pill);
   letter-spacing: 0.03em;
-  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: background var(--transition), border-color var(--transition),
+              color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
 .skill-tag:hover {
-  background: var(--text-primary);
-  color: var(--bg-base);
-  transform: translateY(-2px);
+  background: rgba(255, 180, 220, 0.25);
+  border-color: rgba(255, 180, 220, 0.5);
+  color: #ffe4f0;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(255,150,200,0.2);
 }
 
 /* ============================================================
-   SERVICES — big emoji icons
+   SERVICES — dark modern cards with lilac/pink reflections
    ============================================================ */
 .services {
   padding: 8rem 1.5rem;
@@ -685,53 +746,124 @@ ul  { list-style: none; }
 }
 
 .service-card {
-  background: var(--bg-card);
-  border: 1.5px solid var(--border);
+  background: linear-gradient(145deg, #1c1928 0%, #252235 55%, #1e1a2e 100%);
+  border: 1.5px solid rgba(148, 103, 220, 0.28);
   border-radius: var(--radius-lg);
   padding: 2.5rem 2rem;
   position: relative;
   overflow: hidden;
   cursor: default;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+/* Lilac glow reflection top-left */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: -40px; left: -40px;
+  width: 180px; height: 180px;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
+  transition: opacity var(--transition);
+}
+
+/* Pink glow reflection bottom-right */
+.service-card::after {
+  content: '';
+  position: absolute;
+  bottom: -30px; right: -30px;
+  width: 150px; height: 150px;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.14) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
 }
 
 .service-card:hover {
   transform: translateY(-8px) rotate(-0.5deg);
-  box-shadow: var(--shadow-hover);
-  border-color: var(--border-dark);
+  box-shadow:
+    0 20px 56px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(167, 139, 250, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.09);
+  border-color: rgba(167, 139, 250, 0.5);
+}
+
+.service-card:hover::before {
+  opacity: 1.5;
 }
 
 /* Big emoji icon */
 .service-icon {
-  font-size: 3.2rem;
+  font-size: 3.6rem;
   margin-bottom: 1.4rem;
   line-height: 1;
   display: block;
+  text-align: center;
   transition: transform var(--transition);
+  filter: drop-shadow(0 2px 8px rgba(167,139,250,0.4));
 }
 
 .service-card:hover .service-icon {
   transform: scale(1.15) rotate(5deg);
 }
 
+/* SVG-based service icon */
+.service-icon-svg {
+  font-size: unset;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1.4rem;
+  margin-inline: auto;
+  display: block;
+  transition: transform var(--transition), filter var(--transition);
+}
+
+.service-icon-svg svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(167,139,250,0.35));
+  transition: filter var(--transition);
+}
+
+.service-card:hover .service-icon-svg {
+  transform: scale(1.15) rotate(-4deg);
+}
+
+.service-card:hover .service-icon-svg svg {
+  filter: drop-shadow(0 6px 20px rgba(236,72,153,0.4));
+}
+
 .service-title {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 800;
-  color: var(--text-primary);
+  color: #f1f0ff;
   margin-bottom: 0.8rem;
   letter-spacing: -0.01em;
+  text-align: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .service-desc {
   font-family: var(--font-body);
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  line-height: 1.8;
+  font-size: 0.97rem;
+  color: rgba(210, 205, 240, 0.88);
+  line-height: 1.85;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 /* ============================================================
-   PROJECTS
+   PROJECTS — dark cards with lilac/pink reflections
    ============================================================ */
 .projects {
   padding: 8rem 1.5rem;
@@ -740,8 +872,8 @@ ul  { list-style: none; }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
 }
 
 .project-card {
@@ -749,43 +881,127 @@ ul  { list-style: none; }
   border: 1.5px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  transition: transform var(--transition), box-shadow var(--transition);
+  cursor: pointer;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  position: relative;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px) scale(1.01);
   box-shadow: var(--shadow-hover);
+  border-color: var(--border-dark);
 }
 
+/* Visual banner — tall and dramatic */
 .project-image {
-  height: 185px;
+  height: 240px;
   background: var(--grad);
   position: relative;
   display: flex;
-  align-items: flex-end;
-  padding: 1.4rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  overflow: hidden;
 }
 
-.project-overlay { width: 100%; }
+/* Decorative large number / letter in background */
+.project-image::before {
+  content: attr(data-label);
+  position: absolute;
+  top: -10px; right: -10px;
+  font-family: var(--font-heading);
+  font-size: 10rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.08);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.04em;
+}
+
+/* Animated shimmer line */
+.project-image::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  animation: shimmer 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0%   { left: -100%; }
+  50%  { left: 120%; }
+  100% { left: 120%; }
+}
+
+/* Big project name overlaid on gradient */
+.project-visual-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 2.8vw, 2rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.35);
+  margin-bottom: 0.65rem;
+  position: relative;
+  z-index: 1;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.project-overlay {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
 
 .project-tag {
   display: inline-block;
-  background: rgba(255,255,255,0.25);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.4);
   color: #fff;
   font-family: var(--font-heading);
-  font-size: 0.72rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  letter-spacing: 0.07em;
-  padding: 0.32rem 0.85rem;
+  letter-spacing: 0.06em;
+  padding: 0.45rem 1.1rem;
   border-radius: var(--radius-pill);
   text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+/* Project tech stack badges */
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.project-stack span {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.9);
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-pill);
 }
 
 .project-info {
-  padding: 1.8rem 1.8rem 2rem;
+  padding: 1.8rem 2rem 2rem;
+  border-top: 1.5px solid var(--border);
+  position: relative;
+  z-index: 1;
+  background: var(--bg-card);
 }
 
 .project-title {
@@ -793,7 +1009,22 @@ ul  { list-style: none; }
   font-size: 1.25rem;
   font-weight: 800;
   color: var(--text-primary);
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.project-title-arrow {
+  font-size: 1.1rem;
+  opacity: 0.35;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.project-card:hover .project-title-arrow {
+  opacity: 1;
+  transform: translateX(4px);
 }
 
 .project-desc {
@@ -823,81 +1054,91 @@ ul  { list-style: none; }
 
 .social-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
+/* Circular icon-only buttons */
 .social-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.8rem 1.8rem 0.8rem 0.75rem;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-heading);
-  font-size: 0.9rem;
-  font-weight: 700;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
   border: 2px solid var(--border-dark);
   background: var(--bg-card);
-  color: var(--text-primary);
-  letter-spacing: 0.03em;
   box-shadow: var(--shadow-card);
-  transition: transform var(--transition), background var(--transition),
-              border-color var(--transition), box-shadow var(--transition),
-              color var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition),
+              border-color var(--transition), background var(--transition);
+  position: relative;
+  overflow: hidden;
 }
 
 .social-btn:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
+  transform: translateY(-8px) scale(1.08);
+  box-shadow: 0 16px 40px rgba(26,24,20,0.2);
 }
 
-/* GitHub avatar inside button */
-.social-avatar {
-  width: 34px; height: 34px;
+/* SVG icons (Email, GitHub) */
+.social-svg-icon {
+  width: 42px;
+  height: 42px;
+  display: block;
+  border-radius: 8px;
+  transition: transform var(--transition);
+}
+
+.social-btn:hover .social-svg-icon {
+  transform: scale(1.1);
+}
+
+/* Image icons (LinkedIn, Instagram) */
+.social-img-icon {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--border-dark);
-  flex-shrink: 0;
-  background: var(--bg-surface);
+  display: block;
+  transition: transform var(--transition);
 }
 
-/* Emoji icon for non-avatar buttons */
-.social-icon {
-  font-size: 1.4rem;
+.social-btn:hover .social-img-icon {
+  transform: scale(1.1);
+}
+
+/* Emoji icons (Email mailbox) */
+.social-emoji-icon {
+  font-size: 2.4rem;
   line-height: 1;
-  flex-shrink: 0;
+  display: block;
+  transition: transform var(--transition);
 }
 
-.social-label { line-height: 1; }
+.social-btn:hover .social-emoji-icon {
+  transform: scale(1.15);
+}
 
 /* Hover accent colours */
 .social-btn.email:hover {
-  background: var(--text-primary);
-  color: var(--bg-base);
-  border-color: var(--text-primary);
+  border-color: #1a7a54;
+  box-shadow: 0 16px 40px rgba(26,122,84,0.35);
 }
 
 .social-btn.linkedin:hover {
-  background: #0a66c2;
   border-color: #0a66c2;
-  color: #fff;
+  box-shadow: 0 16px 40px rgba(10,102,194,0.3);
 }
 
 .social-btn.github:hover {
-  background: var(--text-primary);
   border-color: var(--text-primary);
-  color: var(--bg-base);
-}
-
-.social-btn.github:hover .social-avatar {
-  border-color: rgba(245,230,192,0.4);
+  box-shadow: 0 16px 40px rgba(26,24,20,0.3);
 }
 
 .social-btn.instagram:hover {
-  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366);
-  border-color: transparent;
-  color: #fff;
+  border-color: #e1306c;
+  box-shadow: 0 16px 40px rgba(225,48,108,0.35);
 }
 
 /* ============================================================
@@ -967,8 +1208,8 @@ ul  { list-style: none; }
   .about-stats { gap: 1.5rem; }
   .services-grid { grid-template-columns: 1fr; }
 
-  .social-buttons { flex-direction: column; align-items: center; }
-  .social-btn { width: 100%; max-width: 300px; justify-content: center; }
+  .social-buttons { flex-direction: row; gap: 1.2rem; }
+  .social-btn { width: 64px; height: 64px; }
 }
 
 @media (max-width: 480px) {

@@ -52,11 +52,41 @@
 
       <!-- Animated tech chips -->
       <div class="hero-chips">
-        <span class="chip chip-1">🐍 Python</span>
-        <span class="chip chip-2">🌐 HTML & CSS</span>
-        <span class="chip chip-3">⚡ JavaScript</span>
-        <span class="chip chip-4">🗄️ SQL</span>
-        <span class="chip chip-5">🤖 IA</span>
+        <!-- Python -->
+        <span class="chip chip-1">
+          <svg class="chip-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs><linearGradient id="pyGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#3776AB"/><stop offset="100%" stop-color="#FFD43B"/></linearGradient></defs>
+            <path fill="url(#pyGrad)" d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.007 2.752h5.814v.826H3.9S0 5.789 0 11.969c0 6.18 3.403 5.96 3.403 5.96h2.032v-2.867s-.109-3.403 3.345-3.403h5.76s3.236.052 3.236-3.126V3.101S18.28 0 11.914 0zm-3.2 1.789a1.047 1.047 0 1 1 0 2.095 1.047 1.047 0 0 1 0-2.095z"/>
+            <path fill="url(#pyGrad)" d="M12.086 24c6.094 0 5.714-2.656 5.714-2.656l-.007-2.752h-5.814v-.826H20.1S24 18.211 24 12.031c0-6.18-3.403-5.96-3.403-5.96h-2.032v2.867s.109 3.403-3.345 3.403h-5.76S6.224 12.289 6.224 15.467V20.9S5.72 24 12.086 24zm3.2-1.789a1.047 1.047 0 1 1 0 2.095 1.047 1.047 0 0 1 0 2.095z"/>
+          </svg>
+          Python
+        </span>
+        <!-- HTML & CSS -->
+        <span class="chip chip-2">
+          <svg class="chip-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path fill="#E44D26" d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438z"/>
+            <path fill="#F16529" d="M12 21.688l6.916-1.915 1.634-18.29H12z"/>
+            <path fill="#EBEBEB" d="M12 11.375H8.066l-.264-2.937H12V5.578H4.977l.772 8.625H12zm0 5.282l-.012.003-3.268-.882-.209-2.342H5.764l.41 4.598 5.814 1.614.012-.003z"/>
+            <path fill="#fff" d="M12 11.375v2.828h3.671l-.345 3.858-3.326.898v2.942l5.817-1.614.043-.477.667-7.475.068-.96H12zm0-5.797v2.86h7.317l.064-.72.148-1.668.065-.472z"/>
+          </svg>
+          HTML &amp; CSS
+        </span>
+        <!-- JavaScript -->
+        <span class="chip chip-3">
+          <svg class="chip-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="24" height="24" rx="3" fill="#F7DF1E"/>
+            <path d="M6.003 15.834c.322.643.756 1.115 1.512 1.115.755 0 1.234-.378 1.234-1.82v-7.63h2.006v7.657c0 2.998-1.757 4.361-4.32 4.361-2.318 0-3.663-1.2-4.349-2.645l1.917-.038zm7.584-.36c.425.7 1.02 1.256 2.04 1.256.855 0 1.4-.427 1.4-1.017 0-.705-.56-1.01-1.506-1.444l-.518-.222c-1.494-.635-2.487-1.432-2.487-3.116 0-1.55 1.183-2.733 3.03-2.733 1.316 0 2.26.46 2.94 1.66l-1.61 1.032c-.354-.634-.738-.883-1.33-.883-.605 0-.99.385-.99.883 0 .617.385.867 1.275 1.25l.518.222c1.763.756 2.755 1.527 2.755 3.258 0 1.87-1.467 2.882-3.44 2.882-1.927 0-3.169-1.013-3.775-2.34l1.698-.788z"/>
+          </svg>
+          JavaScript
+        </span>
+        <!-- SQL -->
+        <span class="chip chip-4">
+          💾 SQL
+        </span>
+        <!-- IA -->
+        <span class="chip chip-5">
+          <span class="chip-emoji-lg">🤖</span> IA
+        </span>
       </div>
 
       <div class="hero-cta">
@@ -151,8 +181,32 @@
         </div>
 
         <div class="service-card" id="service-backend">
-          <div class="service-icon">🐍</div>
-          <h3 class="service-title">Backend & Bases de Datos</h3>
+          <div class="service-icon service-icon-svg">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="backGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#3776AB"/>
+                  <stop offset="100%" stop-color="#FFD43B"/>
+                </linearGradient>
+              </defs>
+              <!-- Server body -->
+              <rect x="8" y="8" width="48" height="14" rx="4" fill="url(#backGrad)" opacity="0.95"/>
+              <rect x="8" y="26" width="48" height="14" rx="4" fill="url(#backGrad)" opacity="0.75"/>
+              <rect x="8" y="44" width="48" height="14" rx="4" fill="url(#backGrad)" opacity="0.55"/>
+              <!-- Lights -->
+              <circle cx="51" cy="15" r="2.5" fill="#4ade80"/>
+              <circle cx="45" cy="15" r="2.5" fill="#facc15"/>
+              <circle cx="51" cy="33" r="2.5" fill="#4ade80"/>
+              <circle cx="45" cy="33" r="2.5" fill="#94a3b8"/>
+              <circle cx="51" cy="51" r="2.5" fill="#f87171"/>
+              <circle cx="45" cy="51" r="2.5" fill="#94a3b8"/>
+              <!-- Slot lines -->
+              <rect x="14" y="13" width="22" height="3" rx="1.5" fill="rgba(255,255,255,0.4)"/>
+              <rect x="14" y="31" width="22" height="3" rx="1.5" fill="rgba(255,255,255,0.4)"/>
+              <rect x="14" y="49" width="22" height="3" rx="1.5" fill="rgba(255,255,255,0.4)"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Backend &amp; Bases de Datos</h3>
           <p class="service-desc">
             Python para lógica de negocio y automatizaciones. SQL para gestión
             y consulta de bases de datos relacionales.
@@ -160,8 +214,39 @@
         </div>
 
         <div class="service-card" id="service-devops">
-          <div class="service-icon">🐙</div>
-          <h3 class="service-title">Git, Linux & DevOps</h3>
+          <div class="service-icon service-icon-svg">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="gitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1e293b"/>
+                  <stop offset="100%" stop-color="#475569"/>
+                </linearGradient>
+                <linearGradient id="termGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#22c55e"/>
+                  <stop offset="100%" stop-color="#16a34a"/>
+                </linearGradient>
+              </defs>
+              <!-- Terminal window -->
+              <rect x="4" y="8" width="56" height="44" rx="6" fill="url(#gitGrad)"/>
+              <!-- Title bar -->
+              <rect x="4" y="8" width="56" height="14" rx="6" fill="#0f172a"/>
+              <rect x="4" y="16" width="56" height="6" fill="#0f172a"/>
+              <!-- Dots -->
+              <circle cx="16" cy="15" r="3" fill="#f87171"/>
+              <circle cx="26" cy="15" r="3" fill="#facc15"/>
+              <circle cx="36" cy="15" r="3" fill="#4ade80"/>
+              <!-- Cursor prompt -->
+              <text x="12" y="33" font-family="monospace" font-size="9" fill="#4ade80">$</text>
+              <!-- Git branch path -->
+              <circle cx="26" cy="31" r="3.5" fill="#f97316" stroke="#fff" stroke-width="1"/>
+              <line x1="26" y1="34.5" x2="26" y2="44" stroke="#f97316" stroke-width="2"/>
+              <line x1="26" y1="37" x2="38" y2="37" stroke="#f97316" stroke-width="2" stroke-dasharray="2,2"/>
+              <circle cx="38" cy="37" r="3" fill="#fb923c" stroke="#fff" stroke-width="1"/>
+              <line x1="38" y1="40" x2="38" y2="44" stroke="#fb923c" stroke-width="2"/>
+              <circle cx="32" cy="44" r="3.5" fill="#fdba74" stroke="#fff" stroke-width="1"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Git, Linux &amp; DevOps</h3>
           <p class="service-desc">
             Control de versiones con Git &amp; GitHub, manejo de la terminal Linux
             e integración continua y despliegue en la nube.
@@ -189,38 +274,62 @@
       <div class="projects-grid">
 
         <article class="project-card" id="project-crm">
-          <div class="project-image" style="--grad: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+          <div class="project-image" data-label="CRM"
+               style="--grad: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
             <div class="project-overlay">
               <span class="project-tag">✅ Completado</span>
+              <h3 class="project-visual-title">CRM Kanban</h3>
+              <div class="project-stack">
+                <span>Antigravity IDE</span>
+                <span>Kanban</span>
+                <span>Cloud</span>
+              </div>
             </div>
           </div>
           <div class="project-info">
-            <h3 class="project-title">CRM Kanban</h3>
-            <p class="project-desc">Primer CRM desarrollado con Antigravity IDE. Sistema de gestión con tablero Kanban interactivo. En proceso de despliegue en la nube.</p>
+            <p class="project-title">Sistema de gestión interactivo</p>
+            <p class="project-desc">Primer CRM desarrollado con Antigravity IDE. Tablero Kanban interactivo con arrastrar y soltar, gestión de clientes y despliegue en la nube.</p>
           </div>
         </article>
 
         <article class="project-card" id="project-web">
-          <div class="project-image" style="--grad: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+          <div class="project-image" data-label="WEB"
+               style="--grad: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
             <div class="project-overlay">
               <span class="project-tag">🔄 En progreso</span>
+              <h3 class="project-visual-title">Web Personal</h3>
+              <div class="project-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Cloudflare</span>
+              </div>
             </div>
           </div>
           <div class="project-info">
-            <h3 class="project-title">Web Personal</h3>
-            <p class="project-desc">Sitio web personal que documenta mi evolución como desarrolladora: proyectos, aprendizajes y despliegue continuo en la nube.</p>
+            <p class="project-title">Portfolio en evolución continua</p>
+            <p class="project-desc">Este mismo sitio web — diseñado desde cero y desplegado en Cloudflare. Documenta mi camino como desarrolladora con cada commit.</p>
           </div>
         </article>
 
         <article class="project-card" id="project-master">
-          <div class="project-image" style="--grad: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+          <div class="project-image" data-label="MÀST"
+               style="--grad: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
             <div class="project-overlay">
-              <span class="project-tag">📚 Máster</span>
+              <span class="project-tag">📚 Máster Full Stack</span>
+              <h3 class="project-visual-title">Proyectos del Máster</h3>
+              <div class="project-stack">
+                <span>Python</span>
+                <span>SQL</span>
+                <span>Linux</span>
+                <span>Git</span>
+                <span>React</span>
+              </div>
             </div>
           </div>
           <div class="project-info">
-            <h3 class="project-title">Proyectos del Máster Full Stack</h3>
-            <p class="project-desc">Colección de proyectos desarrollados durante el Máster: Python, SQL, Linux, Git, IA y próximamente React &amp; Backend.</p>
+            <p class="project-title">Colección de aprendizaje</p>
+            <p class="project-desc">Proyectos prácticos del Máster Full Stack: desde scripts Python hasta APIs REST, bases de datos relacionales y próximamente React.</p>
           </div>
         </article>
 
@@ -239,21 +348,20 @@
       </p>
 
       <div class="social-buttons">
-        <a href="mailto:hola@irischaconromero.com" class="social-btn email" id="btn-email" aria-label="Email">
-          <span class="social-icon">✉️</span>
-          <span class="social-label">Email</span>
+        <a href="mailto:irischaconromero@gmail.com" class="social-btn email" id="btn-email" aria-label="Email">
+          <span class="social-emoji-icon">📬</span>
         </a>
         <a href="https://www.linkedin.com/in/irischaconromero" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" id="btn-linkedin" aria-label="LinkedIn">
-          <span class="social-icon">💼</span>
-          <span class="social-label">LinkedIn</span>
+          <img src="https://raw.githubusercontent.com/IrisChaConRomero/IrisChaConRomero/main/icons/linkedin_icon.png" alt="LinkedIn" class="social-img-icon" />
         </a>
         <a href="https://github.com/IrisChaConRomero" target="_blank" rel="noopener noreferrer" class="social-btn github" id="btn-github" aria-label="GitHub">
-          <img src="https://avatars.githubusercontent.com/u/258068472?v=4" alt="GitHub Avatar" class="social-avatar" />
-          <span class="social-label">GitHub</span>
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="social-svg-icon" aria-hidden="true">
+            <rect width="24" height="24" rx="4" fill="#1a1814"/>
+            <path fill="#fff" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.004.07 1.532 1.031 1.532 1.031.892 1.529 2.341 1.087 2.912.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.58 9.58 0 0 1 2.504.337c1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.338 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .268.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+          </svg>
         </a>
         <a href="https://instagram.com/irischaconromero" target="_blank" rel="noopener noreferrer" class="social-btn instagram" id="btn-instagram" aria-label="Instagram">
-          <span class="social-icon">📸</span>
-          <span class="social-label">Instagram</span>
+          <img src="https://raw.githubusercontent.com/IrisChaConRomero/IrisChaConRomero/main/icons/Instagram_icon.png" alt="Instagram" class="social-img-icon" />
         </a>
       </div>
     </div>
