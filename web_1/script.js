@@ -222,10 +222,13 @@
      7. STATS COUNTER ANIMATION
   ────────────────────────────────────────── */
   function animateCounter(el) {
-    const target = parseInt(el.textContent.replace(/\D/g, ''), 10);
+    const numericText = el.textContent.replace(/\D/g, '');
+    if (!numericText) return;
+    const target = parseInt(numericText, 10);
+    if (isNaN(target)) return;
     const suffix = el.textContent.replace(/[\d]/g, '');
     let current  = 0;
-    const step   = Math.ceil(target / 40);
+    const step   = Math.max(1, Math.ceil(target / 40));
     const timer  = setInterval(() => {
       current += step;
       if (current >= target) {
@@ -251,4 +254,57 @@
   const statsSection = document.querySelector('.about-stats');
   if (statsSection) statsObserver.observe(statsSection);
 
+  /* ──────────────────────────────────────────
+     8. MASTER PROJECT EMERGENT BUBBLE MODAL
+  ────────────────────────────────────────── */
+  const masterModal = document.getElementById('master-modal');
+  const modalCloseBtn = document.getElementById('modal-close-btn');
+  const bubbleTriggers = [
+    document.getElementById('master-bubble-trigger'),
+    document.getElementById('hero-bubble-btn'),
+    document.getElementById('card-bubble-trigger'),
+    document.getElementById('learning-bubble-trigger')
+  ];
+
+  function openMasterModal() {
+    if (!masterModal) return;
+    masterModal.classList.add('active');
+    masterModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMasterModal() {
+    if (!masterModal) return;
+    masterModal.classList.remove('active');
+    masterModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  bubbleTriggers.forEach((trigger) => {
+    if (trigger) {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        openMasterModal();
+      });
+    }
+  });
+
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener('click', closeMasterModal);
+  }
+
+  if (masterModal) {
+    masterModal.addEventListener('click', (e) => {
+      if (e.target === masterModal) {
+        closeMasterModal();
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && masterModal.classList.contains('active')) {
+        closeMasterModal();
+      }
+    });
+  }
+
 })();
+
