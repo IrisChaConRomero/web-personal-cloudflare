@@ -1552,6 +1552,142 @@ ul  { list-style: none; }
   color: #ffd97d;
 }
 
+/* Official Master Credentials Showcase inside Profile Card */
+.credentials-showcase {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  position: relative;
+  z-index: 1;
+  margin-top: 0.25rem;
+}
+
+.credentials-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #34d399;
+  background: rgba(8, 22, 16, 0.85);
+  border: 1px solid rgba(52, 211, 153, 0.45);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-pill);
+  align-self: flex-start;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+}
+
+.credentials-header-icon {
+  width: 1.05rem;
+  height: 1.05rem;
+  color: var(--accent-gold-light);
+  flex-shrink: 0;
+}
+
+.credential-item {
+  background: rgba(8, 18, 14, 0.86);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-left: 3.5px solid #34d399;
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.15rem;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.credential-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-gold-light);
+  border-left-color: var(--accent-gold-light);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.7), 0 0 18px rgba(52, 211, 153, 0.2);
+}
+
+.credential-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.65rem;
+  margin-bottom: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.credential-title {
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.3;
+  flex: 1;
+  min-width: 190px;
+}
+
+.credential-date {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.14);
+  border: 1px solid rgba(52, 211, 153, 0.38);
+  padding: 0.18rem 0.6rem;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.credential-issuer {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-gold-light);
+  margin-bottom: 0.45rem;
+}
+
+.credential-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.45rem;
+}
+
+.credential-meta-row .credential-issuer {
+  margin-bottom: 0;
+}
+
+.credential-id {
+  font-size: 0.68rem;
+  color: #a7f3d0;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  padding: 0.14rem 0.5rem;
+  border-radius: 6px;
+}
+
+.credential-id code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.67rem;
+  color: #6ee7b7;
+}
+
+.credential-desc {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.credential-desc strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
 .btn-card-bubble {
   background: linear-gradient(135deg, rgba(212, 175, 55, 0.22), rgba(249, 115, 22, 0.2));
   border: 1.5px solid rgba(212, 175, 55, 0.55);
