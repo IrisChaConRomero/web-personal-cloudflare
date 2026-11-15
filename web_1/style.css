@@ -1,14 +1,14 @@
 /* ============================================================
-   IRIS CHACÓN ROMERO — Burgundy & Gold Luxury Tech Edition
-   Fondo burdeos profundo con cuadrícula dorada · Estética Banner
+   IRIS CHACÓN ROMERO — Sitio Web Personal
+   Estilos principales y diseño responsivo
    style.css
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
 
-/* ---------- Design Tokens ---------- */
+/* ---------- Variables de Diseño ---------- */
 :root {
-  /* Backgrounds — Deep Burgundy / Plum & Gold Tech Grid palette */
+  /* Fondos */
   --bg-base:       #180410;
   --bg-surface:    #220617;
   --bg-elevated:   #2d091f;
@@ -16,13 +16,13 @@
   --bg-card-hover: rgba(62, 13, 43, 0.92);
   --bg-dark:       #0e0209;
 
-  /* Text — Crisp Ivory & Warm Gold */
+  /* Textos */
   --text-primary:   #fdf8f2;
   --text-secondary: #f3e3ce;
   --text-muted:     #c4a7b7;
   --text-light:     #180410;
 
-  /* Accents — Metallic Gold & TalentPulse Coral-Orange */
+  /* Acentos */
   --accent-gold:        #d4af37;
   --accent-gold-light:  #f5d77f;
   --accent-gold-glow:   rgba(212, 175, 55, 0.32);
@@ -31,22 +31,22 @@
   --accent-mint:        #34d399;
   --accent-crimson:     #9d174d;
 
-  /* Borders */
+  /* Bordes */
   --border:        rgba(212, 175, 55, 0.22);
   --border-strong: rgba(212, 175, 55, 0.5);
   --border-subtle: rgba(255, 255, 255, 0.08);
 
-  /* Fonts */
+  /* Tipografías */
   --font-heading: 'Syne', system-ui, sans-serif;
   --font-body:    'DM Sans', system-ui, sans-serif;
 
-  /* Shape */
+  /* Radios */
   --radius-sm:   12px;
   --radius-md:   20px;
   --radius-lg:   28px;
   --radius-pill: 999px;
 
-  /* Shadows */
+  /* Sombras */
   --shadow-card:  0 12px 38px rgba(8, 1, 5, 0.65), inset 0 1px 0 rgba(255, 235, 180, 0.12);
   --shadow-hover: 0 22px 58px rgba(0, 0, 0, 0.8), 0 0 28px rgba(212, 175, 55, 0.22);
   --shadow-btn:   0 8px 26px rgba(212, 175, 55, 0.35);
@@ -79,7 +79,7 @@ img { max-width: 100%; display: block; }
 a   { text-decoration: none; color: inherit; }
 ul  { list-style: none; }
 
-/* Custom Scrollbar */
+/* Barra de desplazamiento */
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: #12020b; }
 ::-webkit-scrollbar-thumb {
@@ -88,7 +88,7 @@ ul  { list-style: none; }
   border: 2px solid #12020b;
 }
 
-/* ---------- Utility ---------- */
+/* ---------- Utilidades ---------- */
 .container {
   width: min(1160px, 100% - 3rem);
   margin-inline: auto;
@@ -147,7 +147,7 @@ ul  { list-style: none; }
 }
 
 /* ============================================================
-   NAVBAR — Floating Glassmorphism Luxury Bar
+   NAVEGACIÓN
    ============================================================ */
 .navbar {
   position: fixed;
@@ -247,7 +247,7 @@ ul  { list-style: none; }
 }
 
 /* ============================================================
-   HERO — Burgundy & Gold Spotlight
+   PORTADA / HERO
    ============================================================ */
 .hero {
   position: relative;
@@ -262,7 +262,7 @@ ul  { list-style: none; }
     radial-gradient(circle at 50% 28%, rgba(157, 23, 77, 0.42) 0%, rgba(45, 9, 31, 0.65) 45%, transparent 80%);
 }
 
-/* Decorative ambient glows */
+/* Luces ambientales decorativas */
 .hero-bg-orb {
   position: absolute;
   border-radius: 50%;
@@ -308,7 +308,7 @@ ul  { list-style: none; }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Hero banner / avatar (UNTOUCHED PROFILE IMAGE + LUXURY FRAME) */
+/* Banner principal de portada */
 .hero-avatar-wrapper {
   margin: 0 auto 2rem;
   max-width: 720px;
@@ -394,7 +394,7 @@ ul  { list-style: none; }
   animation: fadeUp 0.9s ease 0.5s both;
 }
 
-/* ── Orbit ring ────────────────────────────────────────────── */
+/* ── Anillo orbital ────────────────────────────────────────── */
 .orbit-ring {
   position: absolute;
   top: 50%; left: 50%;
@@ -423,7 +423,7 @@ ul  { list-style: none; }
   to   { transform: rotate(360deg); }
 }
 
-/* ── Tech chips ────────────────────────────────────────────── */
+/* ── Etiquetas tecnológicas ────────────────────────────────── */
 .hero-chips {
   display: flex;
   flex-wrap: wrap;
@@ -460,7 +460,7 @@ ul  { list-style: none; }
   box-shadow: 0 8px 22px rgba(212, 175, 55, 0.28);
 }
 
-/* SVG icons inside chips */
+/* Iconos SVG en chips */
 .chip-icon {
   width: 1.15rem;
   height: 1.15rem;
@@ -490,19 +490,7 @@ ul  { list-style: none; }
   to   { opacity: 1; transform: translateY(0)    scale(1); }
 }
 
-.chip-emoji-lg {
-  font-size: 1.15rem;
-  line-height: 1;
-  margin-right: 0.32rem;
-  display: inline-block;
-  transition: transform var(--transition);
-}
-
-.chip:hover .chip-emoji-lg {
-  transform: scale(1.25) rotate(-5deg);
-}
-
-/* ---------- Buttons ---------- */
+/* ---------- Botones ---------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -596,7 +584,7 @@ ul  { list-style: none; }
   box-shadow: 0 12px 28px rgba(212, 175, 55, 0.25);
 }
 
-/* Scroll indicator */
+/* Indicador de desplazamiento */
 .hero-scroll-indicator {
   position: absolute;
   bottom: 2rem; left: 50%;
@@ -625,7 +613,7 @@ ul  { list-style: none; }
 }
 
 /* ============================================================
-   ABOUT — Editorial Glass Container + Untouched Profile Card
+   SOBRE MÍ
    ============================================================ */
 .about {
   padding: 7.5rem 1.5rem;
@@ -676,7 +664,7 @@ ul  { list-style: none; }
   font-weight: 600;
 }
 
-/* Progress block */
+/* Bloque de progreso */
 .progress-block {
   background: rgba(20, 3, 13, 0.72);
   border: 1.5px solid rgba(212, 175, 55, 0.35);
@@ -730,7 +718,7 @@ ul  { list-style: none; }
   letter-spacing: 0.02em;
 }
 
-/* Stats */
+/* Estadísticas */
 .about-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -771,7 +759,7 @@ ul  { list-style: none; }
   letter-spacing: 0.02em;
 }
 
-/* About card — Innovative Binary & Source Code Matrix Background */
+/* Tarjeta de perfil y certificaciones */
 .about-card {
   background-color: #0b1612;
   background-image:
@@ -796,7 +784,6 @@ ul  { list-style: none; }
   overflow: hidden;
 }
 
-/* Emerald cyber glow subtle highlight top */
 .about-card::before {
   content: '';
   position: absolute;
@@ -807,7 +794,6 @@ ul  { list-style: none; }
   border-radius: 50%;
 }
 
-/* Gold glow bottom */
 .about-card::after {
   content: '';
   position: absolute;
@@ -907,7 +893,7 @@ ul  { list-style: none; }
 }
 
 /* ============================================================
-   MODULES SECTION — Burgundy & Gold Grid Panel
+   MÓDULOS DEL MÁSTER
    ============================================================ */
 .modules-section {
   margin-top: 3.5rem;
@@ -1026,7 +1012,7 @@ ul  { list-style: none; }
 .module-name   { line-height: 1.3; }
 
 /* ============================================================
-   SERVICES / LEARNING NOW — Burgundy & Gold Cards
+   ESPECIALIZACIÓN Y ESTADO ACTUAL
    ============================================================ */
 .services {
   padding: 7.5rem 1.5rem;
@@ -1067,7 +1053,6 @@ ul  { list-style: none; }
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
-/* Gold glow reflection top-left */
 .service-card::before {
   content: '';
   position: absolute;
@@ -1079,7 +1064,6 @@ ul  { list-style: none; }
   transition: opacity var(--transition);
 }
 
-/* Warm coral glow reflection bottom-right */
 .service-card::after {
   content: '';
   position: absolute;
@@ -1163,7 +1147,7 @@ ul  { list-style: none; }
 }
 
 /* ============================================================
-   PROJECTS — Bento / Featured Grid with Burgundy & Gold Cards
+   PROYECTOS
    ============================================================ */
 .projects {
   padding: 7.5rem 1.5rem;
@@ -1179,23 +1163,30 @@ ul  { list-style: none; }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 1.5rem;
   align-items: stretch;
 }
 
-/* Make TalentPulse Master Card span 2 columns on desktop for visual hierarchy */
-.project-card-master {
+/* Tarjetas inferiores (3 columnas iguales) */
+.project-card {
   grid-column: span 2;
+}
+
+/* Tarjetas superiores destacadas (2 columnas iguales 50/50) */
+.project-card-master {
+  grid-column: span 3;
 }
 
 @media (max-width: 1024px) {
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
-  .project-card-master { grid-column: span 2; }
+  .project-card,
+  .project-card-master { grid-column: span 1; }
 }
 
 @media (max-width: 640px) {
   .projects-grid { grid-template-columns: 1fr; }
+  .project-card,
   .project-card-master { grid-column: span 1; }
 }
 
@@ -1355,7 +1346,7 @@ ul  { list-style: none; }
 }
 
 /* ============================================================
-   CONTACT — Open Section & Social Buttons (No Outer Card)
+   CONTACTO Y REDES
    ============================================================ */
 .contact {
   padding: 7.5rem 1.5rem;
@@ -1453,7 +1444,7 @@ ul  { list-style: none; }
 }
 
 /* ============================================================
-   FOOTER
+   PIE DE PÁGINA
    ============================================================ */
 .footer {
   padding: 2.4rem 1.5rem;
@@ -1470,7 +1461,7 @@ ul  { list-style: none; }
 }
 
 /* ============================================================
-   SCROLL REVEAL
+   ANIMACIÓN DE APARICIÓN
    ============================================================ */
 .reveal {
   opacity: 0;
@@ -1484,7 +1475,7 @@ ul  { list-style: none; }
 }
 
 /* ============================================================
-   RESPONSIVE
+   DISEÑO RESPONSIVO
    ============================================================ */
 @media (max-width: 900px) {
   .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -1536,31 +1527,8 @@ ul  { list-style: none; }
 }
 
 /* ============================================================
-   FLOATING BUBBLE WIDGET & EMERGENT MODAL (PROYECTO MASTER)
+   CERTIFICACIONES Y MODAL DE PROYECTO
    ============================================================ */
-.curious-fact {
-  background: rgba(10, 20, 16, 0.82);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1.5px solid rgba(52, 211, 153, 0.38);
-  border-radius: var(--radius-md);
-  padding: 1rem 1.2rem;
-  color: #f7e6c4;
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  line-height: 1.6;
-  width: 100%;
-  margin-top: 0.5rem;
-  position: relative;
-  z-index: 1;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-}
-
-.curious-fact strong {
-  color: #ffd97d;
-}
-
-/* Official Master Credentials Showcase inside Profile Card */
 .credentials-showcase {
   width: 100%;
   display: flex;
@@ -1697,6 +1665,10 @@ ul  { list-style: none; }
 }
 
 .btn-card-bubble {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
   background: linear-gradient(135deg, rgba(212, 175, 55, 0.22), rgba(249, 115, 22, 0.2));
   border: 1.5px solid rgba(212, 175, 55, 0.55);
   color: var(--accent-gold-light);
@@ -1761,7 +1733,7 @@ ul  { list-style: none; }
   color: #ffffff;
 }
 
-/* Emergent Modal Overlay */
+/* Ventana modal de detalles */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -1904,12 +1876,6 @@ ul  { list-style: none; }
 }
 
 @media (max-width: 600px) {
-  .master-bubble-widget {
-    bottom: 1.2rem;
-    right: 1.2rem;
-    padding: 0.6rem 1rem;
-    font-size: 0.8rem;
-  }
   .modal-card {
     padding: 1.8rem 1.2rem;
   }

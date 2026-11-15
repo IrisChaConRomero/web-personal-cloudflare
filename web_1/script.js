@@ -1,5 +1,5 @@
 /* ============================================================
-   IRIS CHACÓN ROMERO — Personal Website
+   IRIS CHACÓN ROMERO — Sitio Web Personal
    script.js
    ============================================================ */
 
@@ -7,7 +7,7 @@
   'use strict';
 
   /* ──────────────────────────────────────────
-     1. NAVBAR — scroll behaviour & active link
+     1. BARRA DE NAVEGACIÓN — scroll y sección activa
   ────────────────────────────────────────── */
   const navbar   = document.getElementById('navbar');
   const navLinks = document.querySelectorAll('.nav-link');
@@ -20,7 +20,7 @@
     }
   }
 
-  // Highlight active section in navbar
+  // Resaltar sección activa en el menú
   function highlightActiveSection() {
     const sections = document.querySelectorAll('section[id]');
     const scrollY  = window.scrollY + 120;
@@ -48,7 +48,7 @@
   handleNavbarScroll();
 
   /* ──────────────────────────────────────────
-     2. HAMBURGER MENU (mobile)
+     2. MENÚ MÓVIL (hamburguesa)
   ────────────────────────────────────────── */
   const hamburger   = document.getElementById('hamburger');
   const navLinksEl  = document.getElementById('nav-links');
@@ -57,11 +57,9 @@
     const isOpen = hamburger.classList.toggle('open');
     navLinksEl.classList.toggle('open', isOpen);
     hamburger.setAttribute('aria-expanded', isOpen);
-    // Prevent body scroll when menu is open
     document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
-  // Close menu when a link is clicked
   navLinksEl.querySelectorAll('.nav-link').forEach((link) => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('open');
@@ -71,7 +69,7 @@
   });
 
   /* ──────────────────────────────────────────
-     3. SCROLL REVEAL
+     3. ANIMACIÓN DE ENTRADA AL HACER SCROLL
   ────────────────────────────────────────── */
   const revealElements = document.querySelectorAll(
     '.about-grid, .services-grid, .projects-grid, ' +
@@ -87,7 +85,6 @@
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Stagger children if the element has reveal children
           const children = entry.target.querySelectorAll(
             '.service-card, .project-card'
           );
@@ -114,7 +111,7 @@
   revealElements.forEach((el) => revealObserver.observe(el));
 
   /* ──────────────────────────────────────────
-     4. SMOOTH HOVER TILT on project cards
+     4. EFECTO TILT EN TARJETAS
   ────────────────────────────────────────── */
   const tiltCards = document.querySelectorAll('.project-card, .service-card');
 
@@ -136,7 +133,7 @@
   });
 
   /* ──────────────────────────────────────────
-     5. HERO CURSOR PARALLAX (subtle orbs follow)
+     5. PARALLAX SUAVE EN PORTADA
   ────────────────────────────────────────── */
   const orb1 = document.querySelector('.orb-1');
   const orb2 = document.querySelector('.orb-2');
@@ -155,7 +152,7 @@
   }
 
   /* ──────────────────────────────────────────
-     6. TYPED EFFECT on hero tagline
+     6. EFECTO DE ESCRITURA EN SUBTÍTULO
   ────────────────────────────────────────── */
   const tagline = document.querySelector('.hero-tagline');
   if (tagline) {
@@ -166,7 +163,6 @@
 
     const fullText = tagline.innerHTML;
 
-    // Wait for hero animation to finish then run typer
     setTimeout(() => {
       tagline.innerHTML = '';
       let lineIdx   = 0;
@@ -184,9 +180,7 @@
           charIdx++;
 
           if (charIdx === currentLine.length) {
-            // Finished typing this line
             if (lineIdx === lines.length - 1) {
-              // Last line — stop and restore full original content
               setTimeout(() => {
                 tagline.innerHTML = fullText;
               }, 800);
@@ -219,7 +213,7 @@
   }
 
   /* ──────────────────────────────────────────
-     7. STATS COUNTER ANIMATION
+     7. CONTADOR ANIMADO DE ESTADÍSTICAS
   ────────────────────────────────────────── */
   function animateCounter(el) {
     const numericText = el.textContent.replace(/\D/g, '');
@@ -255,12 +249,11 @@
   if (statsSection) statsObserver.observe(statsSection);
 
   /* ──────────────────────────────────────────
-     8. MASTER PROJECT EMERGENT BUBBLE MODAL
+     8. MODAL DETALLES DE TALENTPULSE
   ────────────────────────────────────────── */
   const masterModal = document.getElementById('master-modal');
   const modalCloseBtn = document.getElementById('modal-close-btn');
   const bubbleTriggers = [
-    document.getElementById('master-bubble-trigger'),
     document.getElementById('hero-bubble-btn'),
     document.getElementById('card-bubble-trigger'),
     document.getElementById('learning-bubble-trigger')

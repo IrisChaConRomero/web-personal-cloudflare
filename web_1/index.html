@@ -13,7 +13,7 @@
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- ===== NAVEGACIÓN ===== -->
   <header class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#hero" class="nav-logo">ICR</a>
@@ -30,13 +30,13 @@
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
+  <!-- ===== PORTADA / HERO ===== -->
   <section class="hero" id="hero">
     <div class="hero-bg-orb orb-1"></div>
     <div class="hero-bg-orb orb-2"></div>
     <div class="hero-bg-orb orb-3"></div>
 
-    <!-- Decorative orbit ring -->
+    <!-- Anillo decorativo -->
     <div class="orbit-ring" aria-hidden="true"></div>
 
     <div class="hero-content">
@@ -58,7 +58,7 @@
         Apasionada del código, la arquitectura backend y la creación de soluciones digitales reales.
       </p>
 
-      <!-- Animated tech chips with official SVG logos -->
+      <!-- Tecnologías principales -->
       <div class="hero-chips">
         <!-- Python -->
         <span class="chip chip-1">
@@ -154,7 +154,7 @@
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
+  <!-- ===== SOBRE MÍ ===== -->
   <section class="about" id="about">
     <div class="container">
       <div class="section-label">Sobre mí</div>
@@ -268,7 +268,7 @@
         </div>
       </div>
 
-      <!-- ===== MASTER MODULES TABLE / GRID ===== -->
+      <!-- ===== MÓDULOS DEL MÁSTER ===== -->
       <div class="modules-section" id="modules">
         <div class="modules-header">
           <h3 class="modules-label">
@@ -332,7 +332,7 @@
     </div>
   </section>
 
-  <!-- ===== LEARNING NOW / SERVICES ===== -->
+  <!-- ===== ESPECIALIZACIÓN Y ESTADO ACTUAL ===== -->
   <section class="services" id="learning">
     <div class="container">
       <div class="section-label">Especialización &amp; Estado Actual</div>
@@ -402,14 +402,14 @@
     </div>
   </section>
 
-  <!-- ===== PROJECTS ===== -->
+  <!-- ===== PROYECTOS ===== -->
   <section class="projects" id="projects">
     <div class="container">
       <div class="section-label">Portafolio Técnico</div>
       <h2 class="section-title centered">Proyectos &amp; Repositorio</h2>
       <div class="projects-grid">
 
-        <!-- TalentPulse (Master Project) -->
+        <!-- TalentPulse (Proyecto Fin de Máster) -->
         <article class="project-card project-card-master" id="project-talentpulse">
           <div class="project-icon-wrap">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
@@ -417,11 +417,12 @@
             </svg>
           </div>
           <span class="project-tag tag-master">Proyecto Fin de Máster · Aprobado</span>
-          <p class="project-title">TalentPulse</p>
+          <p class="project-title">TalentPulse · Evaluación 360º &amp; OKRs</p>
           <p class="project-desc">
-            Plataforma Full Stack empresarial con código fuente completo, arquitectura backend en Django 5, frontend reactivo en React 18, base de datos PostgreSQL y memoria técnica.
+            Plataforma Full Stack empresarial para evaluación de desempeño 360º y seguimiento de OKRs. Arquitectura backend con API REST en Django 5, control de accesos por roles (RBAC), frontend reactivo en React 18 (Vite), PostgreSQL y despliegue con Docker en Render.
           </p>
           <div class="project-stack">
+            <span><i class="devicon-python-plain colored"></i> Python</span>
             <span><i class="devicon-django-plain"></i> Django 5</span>
             <span><i class="devicon-react-original colored"></i> React 18</span>
             <span><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
@@ -430,28 +431,36 @@
           </div>
           <div class="master-card-actions">
             <button class="btn-card-bubble" id="card-bubble-trigger">Ver detalles del proyecto</button>
-            <a href="https://github.com/IrisChaConRomero/TalentPulse" target="_blank" rel="noopener noreferrer" class="link-github-repo">
+            <a href="https://github.com/IrisChaConRomero/TalentPulse" target="_blank" rel="noopener noreferrer" class="btn-card-bubble">
               <i class="devicon-github-original"></i> Ver en GitHub
             </a>
           </div>
         </article>
 
-        <!-- Aplicaciones Full Stack -->
-        <article class="project-card" id="project-fullstack">
+        <!-- Portafolio Personal y Centro de Proyectos Web -->
+        <article class="project-card project-card-master" id="project-fullstack">
           <div class="project-icon-wrap">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3" />
             </svg>
           </div>
-          <span class="project-tag">Arquitectura Full Stack</span>
-          <p class="project-title">Aplicaciones Full Stack</p>
+          <span class="project-tag tag-master">Frontend &amp; Cloud CI/CD · En Producción</span>
+          <p class="project-title">Portafolio Personal &amp; Centro Web</p>
           <p class="project-desc">
-            Proyectos que integran lógica de negocio en Python/Django REST con interfaces dinámicas y modernas en React.
+            Diseño, maquetación a medida e implementación desde cero de mi ecosistema web interactivo y adaptable sin plantillas prefabricadas. Arquitectura frontend moderna con diseño responsivo y despliegue continuo automatizado (CI/CD) en Cloudflare Pages conectado a GitHub.
           </p>
           <div class="project-stack">
-            <span><i class="devicon-python-plain colored"></i> Python</span>
-            <span><i class="devicon-django-plain"></i> Django</span>
-            <span><i class="devicon-react-original colored"></i> React</span>
+            <span><i class="devicon-html5-plain colored"></i> HTML5</span>
+            <span><i class="devicon-css3-plain colored"></i> CSS3 Responsivo</span>
+            <span><i class="devicon-javascript-plain colored"></i> JavaScript ES6+</span>
+            <span><i class="devicon-cloudflare-plain colored"></i> Cloudflare Pages</span>
+            <span><i class="devicon-github-original"></i> GitHub CI/CD</span>
+          </div>
+          <div class="master-card-actions">
+            <a href="#hero" class="btn-card-bubble">Explorar arquitectura</a>
+            <a href="https://github.com/IrisChaConRomero/web-personal-cloudflare" target="_blank" rel="noopener noreferrer" class="btn-card-bubble">
+              <i class="devicon-github-original"></i> Ver en GitHub
+            </a>
           </div>
         </article>
 
@@ -516,7 +525,7 @@
     </div>
   </section>
 
-  <!-- ===== CONTACT / SOCIAL ===== -->
+  <!-- ===== CONTACTO Y REDES ===== -->
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-label">Contacto &amp; Redes</div>
@@ -551,7 +560,7 @@
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ===== PIE DE PÁGINA ===== -->
   <footer class="footer">
     <div class="container">
       <p class="footer-text">
