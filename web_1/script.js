@@ -160,8 +160,8 @@
   const tagline = document.querySelector('.hero-tagline');
   if (tagline) {
     const lines = [
-      'Diseñadora & Creadora Digital.',
-      'Transformo ideas en experiencias que impactan.',
+      'Creadora de TalentPulse · Full Stack Developer.',
+      'Arquitectura Backend, Frontend React y Despliegue Cloud.',
     ];
 
     const fullText = tagline.innerHTML;
