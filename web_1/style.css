@@ -771,16 +771,16 @@ ul  { list-style: none; }
   letter-spacing: 0.02em;
 }
 
-/* About card — Burgundy & Gold Tech Grid style matching Banner (PRESERVED) */
+/* About card — Innovative Binary & Source Code Matrix Background */
 .about-card {
-  background-color: #380924;
+  background-color: #0b1612;
   background-image:
-    linear-gradient(rgba(212, 175, 55, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(212, 175, 55, 0.07) 1px, transparent 1px),
-    radial-gradient(circle at 85% 15%, rgba(212, 175, 55, 0.18) 0%, transparent 55%),
-    linear-gradient(155deg, #4a0e31 0%, #2d061d 55%, #1c0311 100%);
-  background-size: 26px 26px, 26px 26px, 100% 100%, 100% 100%;
-  border: 2px solid rgba(212, 175, 55, 0.45);
+    linear-gradient(165deg, rgba(14, 5, 12, 0.45) 0%, rgba(6, 22, 16, 0.52) 50%, rgba(16, 4, 12, 0.68) 100%),
+    url('code_matrix_bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 2px solid rgba(52, 211, 153, 0.48);
   border-radius: var(--radius-lg);
   padding: 2.2rem 2rem;
   display: flex;
@@ -789,30 +789,31 @@ ul  { list-style: none; }
   justify-content: space-between;
   gap: 1.8rem;
   box-shadow:
-    0 12px 40px rgba(35, 4, 22, 0.45),
-    inset 0 1px 0 rgba(255, 225, 150, 0.2);
+    0 16px 46px rgba(0, 0, 0, 0.65),
+    0 0 28px rgba(16, 185, 129, 0.16),
+    inset 0 1px 0 rgba(110, 231, 183, 0.25);
   position: relative;
   overflow: hidden;
 }
 
-/* Warm gold glow subtle highlight top */
+/* Emerald cyber glow subtle highlight top */
 .about-card::before {
   content: '';
   position: absolute;
   top: -40px; right: -40px;
   width: 220px; height: 220px;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.22) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.22) 0%, transparent 70%);
   pointer-events: none;
   border-radius: 50%;
 }
 
-/* Deep crimson/orange glow bottom */
+/* Gold glow bottom */
 .about-card::after {
   content: '';
   position: absolute;
   bottom: -40px; left: 10%;
   width: 180px; height: 180px;
-  background: radial-gradient(circle, rgba(224, 90, 58, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
   pointer-events: none;
   border-radius: 50%;
 }
@@ -853,8 +854,10 @@ ul  { list-style: none; }
   display: inline-flex;
   align-items: center;
   gap: 0.42rem;
-  background: rgba(212, 175, 55, 0.12);
-  border: 1.5px solid rgba(212, 175, 55, 0.38);
+  background: rgba(10, 20, 16, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(212, 175, 55, 0.45);
   color: #fae8b6;
   font-family: var(--font-body);
   font-size: 0.8rem;
@@ -865,6 +868,7 @@ ul  { list-style: none; }
   cursor: pointer;
   position: relative;
   z-index: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
   transition: background var(--transition), border-color var(--transition),
               color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
@@ -1527,8 +1531,10 @@ ul  { list-style: none; }
    FLOATING BUBBLE WIDGET & EMERGENT MODAL (PROYECTO MASTER)
    ============================================================ */
 .curious-fact {
-  background: rgba(212, 175, 55, 0.08);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  background: rgba(10, 20, 16, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(52, 211, 153, 0.38);
   border-radius: var(--radius-md);
   padding: 1rem 1.2rem;
   color: #f7e6c4;
@@ -1539,6 +1545,7 @@ ul  { list-style: none; }
   margin-top: 0.5rem;
   position: relative;
   z-index: 1;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 .curious-fact strong {
