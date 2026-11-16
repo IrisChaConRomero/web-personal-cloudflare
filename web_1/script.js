@@ -254,7 +254,6 @@
   const masterModal = document.getElementById('master-modal');
   const modalCloseBtn = document.getElementById('modal-close-btn');
   const bubbleTriggers = [
-    document.getElementById('hero-bubble-btn'),
     document.getElementById('card-bubble-trigger'),
     document.getElementById('learning-bubble-trigger')
   ];
