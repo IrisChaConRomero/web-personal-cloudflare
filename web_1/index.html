@@ -160,7 +160,20 @@
       <div class="section-label">Sobre mí</div>
       <div class="about-grid">
         <div class="about-text">
-          <h2 class="section-title">Hola, soy Iris ChaCón</h2>
+          <div class="about-profile-header">
+            <div class="about-profile-photo-wrap" id="profile-photo-trigger" role="button" tabindex="0" aria-label="Ampliar fotografía de Iris Chacón Romero" title="Haz clic para ampliar">
+              <img src="iris_perfil_real.jpg" alt="Iris Chacón Romero — Full Stack Developer" class="about-profile-photo" />
+            </div>
+            <div class="about-profile-intro">
+              <span class="about-profile-role">
+                <span class="status-dot"></span>
+                Full Stack Developer · Zaragoza, España
+              </span>
+              <h2 class="section-title">Hola, soy Iris ChaCón</h2>
+              <p class="about-profile-sub">Python · Django 5 · React 18 · Arquitectura &amp; Cloud</p>
+            </div>
+          </div>
+
           <p class="about-description">
             Soy una apasionada del código, el aprendizaje continuo y la creación de soluciones digitales de alto impacto.
             He finalizado mi <strong>Máster de Desarrollo Web Full Stack</strong> (Conquer Blocks · IEAD), y este espacio refleja mi evolución técnica, arquitectura de software y proyectos en producción.
@@ -253,15 +266,15 @@
             <!-- Titulación 2 -->
             <div class="credential-item">
               <div class="credential-top">
-                <h4 class="credential-title">Máster en Desarrollo Web Full Stack – Especialización Técnica</h4>
-                <span class="credential-date">Sept. 2025 – Oct. 2026</span>
+                <h4 class="credential-title">Certificación Universitaria – Máster en Desarrollo Full-Stack (60 ECTS · 1.500 h)</h4>
+                <span class="credential-date">Nov. 2026</span>
               </div>
               <div class="credential-meta-row">
-                <span class="credential-issuer">Conquer Blocks</span>
-                <span class="credential-id">ID: <code>1cbea455-9eb0-4553-9c07-b8ba08798747</code></span>
+                <span class="credential-issuer">Universidad Internacional Isabel I de Castilla · IEAD</span>
+                <span class="credential-id">Reg. FV: <code>202616519</code> · CSV: <code>c1731fb4f5fe...8504d8</code></span>
               </div>
               <p class="credential-desc">
-                Plan de estudios orientado a producción: arquitectura backend empresarial con Python/Django, frontend moderno con React 18, modelado relacional, contenerización con Docker y metodologías ágiles (Scrum).
+                Titulación universitaria (1.500 horas · 60 créditos ECTS) que acredita 16 módulos formativos: <strong>Python Básico y Avanzado, Django, React (Básico a Avanzado), JavaScript, Node.js, Astro, Java &amp; Spring, Rust, Linux y Git/GitHub</strong>.
               </p>
             </div>
           </div>
@@ -351,9 +364,8 @@
               Plataforma web completa para evaluación 360º y seguimiento de OKRs, con API REST en Django 5 y frontend en React 18 (Vite). Proyecto Fin de Máster completado.
             </p>
           </div>
-          <div style="margin-top: 1.2rem; display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap;">
-            <a href="https://talentpulse-frontend-9p4e.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn-card-bubble">Abrir Web</a>
-            <button class="btn-card-bubble" id="learning-bubble-trigger">Ficha técnica</button>
+          <div style="margin-top: 1.2rem; text-align: center;">
+            <button class="btn-card-bubble" id="learning-bubble-trigger">Memoria técnica</button>
           </div>
         </div>
 
@@ -431,11 +443,6 @@
             <span>Render Cloud</span>
           </div>
           <div class="master-card-actions">
-            <a href="https://talentpulse-frontend-9p4e.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn-card-bubble">
-              <svg class="btn-icon-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clip-rule="evenodd"/></svg>
-              Ver Web Desplegada
-            </a>
-            <button class="btn-card-bubble" id="card-bubble-trigger">Ficha técnica</button>
             <a href="https://github.com/IrisChaConRomero/TalentPulse" target="_blank" rel="noopener noreferrer" class="btn-card-bubble">
               <i class="devicon-github-original"></i> Ver en GitHub
             </a>
@@ -462,7 +469,6 @@
             <span><i class="devicon-github-original"></i> GitHub CI/CD</span>
           </div>
           <div class="master-card-actions">
-            <a href="#hero" class="btn-card-bubble">Explorar arquitectura</a>
             <a href="https://github.com/IrisChaConRomero/web-personal-cloudflare" target="_blank" rel="noopener noreferrer" class="btn-card-bubble">
               <i class="devicon-github-original"></i> Ver en GitHub
             </a>
@@ -569,49 +575,188 @@
   <footer class="footer">
     <div class="container">
       <p class="footer-text">
-        © 2026 Iris ChaCón · Full Stack Developer · Python · Django · React · Arquitectura &amp; Despliegue Cloud
+        © 2026 Iris Chacón Romero · Full Stack Developer · Python · Django · React · Arquitectura &amp; Despliegue Cloud
       </p>
     </div>
   </footer>
 
-  <!-- ===== MODAL DETALLES TALENTPULSE ===== -->
+  <!-- ===== MODAL MEMORIA TÉCNICA TALENTPULSE ===== -->
   <div class="modal-overlay" id="master-modal" aria-hidden="true">
-    <div class="modal-card">
+    <div class="modal-card modal-card-memoria">
       <button class="modal-close" id="modal-close-btn" aria-label="Cerrar modal">&times;</button>
+
       <div class="modal-header">
-        <span class="modal-badge">Proyecto Fin de Máster · APROBADO</span>
+        <span class="modal-badge">Memoria Técnica Oficial · Proyecto Final de Máster (APROBADO)</span>
         <h2>TalentPulse</h2>
-        <p class="modal-subtitle">Plataforma Web para Evaluación 360º y Seguimiento de OKRs</p>
-      </div>
-      <div class="modal-body">
-        <p>
-          <strong>TalentPulse</strong> es mi proyecto final de máster Full Stack: una plataforma web integral diseñada para la gestión del talento, evaluación 360º de desempeño y seguimiento continuo de OKRs corporativos.
-        </p>
-        <ul class="modal-highlights">
-          <li><strong>Backend REST API:</strong> Construida con Django 5, modelado relacional riguroso y optimización de consultas SQL.</li>
-          <li><strong>Seguridad &amp; Permisos:</strong> Sistema de autenticación de usuarios personalizado (<code>CustomUser</code>) y control de accesos basado en roles (RBAC).</li>
-          <li><strong>Frontend Dinámico:</strong> Interfaz moderna e interactiva desarrollada con React 18 y empacada con Vite.</li>
-          <li><strong>Contenerización &amp; Cloud:</strong> Arquitectura empaquetada con Docker y desplegada en producción mediante Render y Cloudflare Pages.</li>
-        </ul>
-        <div class="modal-tech-stack">
-          <span><i class="devicon-python-plain colored"></i> Python</span>
-          <span><i class="devicon-django-plain"></i> Django 5</span>
-          <span><i class="devicon-react-original colored"></i> React 18</span>
-          <span><i class="devicon-vitejs-plain colored"></i> Vite</span>
-          <span><i class="devicon-docker-plain colored"></i> Docker</span>
-          <span>Render</span>
-          <span><i class="devicon-cloudflare-plain colored"></i> Cloudflare Pages</span>
-          <span><i class="devicon-postgresql-plain colored"></i> SQL</span>
+        <p class="modal-subtitle">Plataforma de Gestión del Talento, Evaluaciones 360° y Objetivos (OKRs)</p>
+        <div class="memoria-meta-grid">
+          <div class="memoria-meta-item">
+            <span class="memoria-meta-label">Autora</span>
+            <span class="memoria-meta-value">Iris Chacón Romero</span>
+          </div>
+          <div class="memoria-meta-item">
+            <span class="memoria-meta-label">Programa</span>
+            <span class="memoria-meta-value">Máster en Desarrollo Full Stack · Conquer Blocks</span>
+          </div>
+          <div class="memoria-meta-item">
+            <span class="memoria-meta-label">Stack Principal</span>
+            <span class="memoria-meta-value">Django 5 · DRF · React 18 · Vite · PostgreSQL · Docker</span>
+          </div>
+          <div class="memoria-meta-item">
+            <span class="memoria-meta-label">Producción (Live Demo)</span>
+            <a href="https://talentpulse-frontend-9p4e.onrender.com/" target="_blank" rel="noopener noreferrer" class="memoria-meta-link">talentpulse-frontend-9p4e.onrender.com &nearr;</a>
+          </div>
         </div>
       </div>
-      <div class="modal-footer" style="gap: 0.8rem; flex-wrap: wrap;">
+
+      <div class="modal-body memoria-body">
+
+        <!-- 1. Definición del problema y Solución -->
+        <section class="memoria-section">
+          <h3 class="memoria-section-title"><span>01</span> Definición del Problema y Solución Propuesta</h3>
+          <p>
+            En un alto porcentaje de organizaciones, el seguimiento de objetivos estratégicos (OKRs) y las evaluaciones de desempeño se ejecutan manualmente con hojas de cálculo desconectadas, provocando falta de visibilidad ejecutiva, ciclos de evaluación lentos y ausencia de retroalimentación continua.
+          </p>
+          <p style="margin-top: 0.6rem;">
+            <strong>TalentPulse</strong> centraliza este flujo en una única plataforma Full Stack moderna y accesible:
+          </p>
+          <ul class="modal-highlights">
+            <li><strong>Gestión de Objetivos OKRs:</strong> Actualización de métricas en tiempo real con recálculo automático en el ORM (<code>calculate_progress()</code>) y estados dinámicos (<code>IN_PROGRESS</code>, <code>COMPLETED</code>, <code>AT_RISK</code>).</li>
+            <li><strong>Evaluaciones de Desempeño 360°:</strong> Valoración ponderada de competencias cuantitativas (Liderazgo, Trabajo en Equipo, Habilidades Técnicas) y feedback cualitativo.</li>
+            <li><strong>Feedback Continuo:</strong> Muro de reconocimientos en tiempo real con opción de mensajes públicos o anónimos.</li>
+            <li><strong>Consola Admin &amp; Dashboard por Rol:</strong> Separación estricta entre Configuración Admin (usuarios, roles RBAC, departamentos, presupuestos y auditoría) y Supervisión de Equipo del Manager.</li>
+            <li><strong>Asistente Estratégico Contextual (3 Perfiles):</strong> Módulo de recomendaciones adaptado a <code>ADMIN</code>, <code>MANAGER</code> y <code>EMPLOYEE</code> con generador automático de objetivos SMART en 1 clic.</li>
+            <li><strong>Espacio Wellness &amp; Música:</strong> Burbuja interactiva con guía de respiración consciente (<code>4-7-8</code>, <code>Box 4×4</code>, <code>5-5 Zen</code>), temporizador Pomodoro y reproductor integrado.</li>
+          </ul>
+        </section>
+
+        <!-- 2. Aportación y Eficiencia -->
+        <section class="memoria-section">
+          <h3 class="memoria-section-title"><span>02</span> Reflexión: Aportación y Eficiencia Operativa</h3>
+          <p>
+            La plataforma transforma flujos analógicos dispersos en procesos digitales automatizados mediante agregación analítica en tiempo real con consultas optimizadas (<code>Count</code> y <code>Avg</code> en Django ORM):
+          </p>
+          <div class="memoria-table-wrap">
+            <table class="memoria-table">
+              <thead>
+                <tr>
+                  <th>Proceso</th>
+                  <th>Método Tradicional</th>
+                  <th>Con TalentPulse</th>
+                  <th>Impacto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Evaluaciones 360°</strong></td>
+                  <td>2 a 3 semanas manuales</td>
+                  <td>Inmediata tras aprobación digital</td>
+                  <td><span class="memoria-pill-mint">85% ahorro de tiempo</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Recálculo de OKRs</strong></td>
+                  <td>Manual semanal (~5h/mes)</td>
+                  <td>Automático instantáneo en BD</td>
+                  <td><span class="memoria-pill-mint">100% automatización</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Feedback de Equipo</strong></td>
+                  <td>Anual / Semestral</td>
+                  <td>Tiempo real en 3 clics</td>
+                  <td><span class="memoria-pill-mint">Mayor compromiso</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 3. Arquitectura y Tecnologías -->
+        <section class="memoria-section">
+          <h3 class="memoria-section-title"><span>03</span> Arquitectura y Tecnologías Utilizadas</h3>
+          <div class="memoria-cards-grid">
+            <div class="memoria-mini-card">
+              <h4>Backend (Django 5 &amp; DRF)</h4>
+              <p>API RESTful desacoplada con ViewSets, paginación y serializadores tipados. Modelo <code>CustomUser (AbstractUser)</code> con roles, departamentos y protección CORS.</p>
+            </div>
+            <div class="memoria-mini-card">
+              <h4>Frontend (React 18 &amp; Vite 6)</h4>
+              <p>Aplicación SPA modular sin recargas, cliente HTTP Axios con interceptores de Token, estado global con <code>AuthContext</code> y diseño CSS3 Glassmorphic responsivo.</p>
+            </div>
+            <div class="memoria-mini-card">
+              <h4>DevOps &amp; Cloud</h4>
+              <p>Base de datos relacional SQLite/PostgreSQL, contenerización multi-servicio con Docker &amp; Docker Compose y despliegue automatizado en Render.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Matriz de Roles RBAC -->
+        <section class="memoria-section">
+          <h3 class="memoria-section-title"><span>04</span> Control de Acceso Basado en Roles (RBAC)</h3>
+          <div class="memoria-table-wrap">
+            <table class="memoria-table">
+              <thead>
+                <tr>
+                  <th>Rol</th>
+                  <th>Alcance y Acciones Permitidas</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Administrador / CTO</strong></td>
+                  <td>Consola de Configuración Admin (gestión de usuarios, roles RBAC, presupuestos departamentales y auditoría) y Dashboard Global financiero interdepartamental.</td>
+                </tr>
+                <tr>
+                  <td><strong>Manager / Supervisor</strong></td>
+                  <td>Panel <em>Mi Equipo &amp; KPIs</em> (supervisión departamental y carga de trabajo), asignación de OKRs y creación de evaluaciones 360°.</td>
+                </tr>
+                <tr>
+                  <td><strong>Empleado</strong></td>
+                  <td>Actualización interactiva de resultados clave (sliders de OKRs), consulta de evaluaciones 360°, envío de reconocimientos y espacio Wellness.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 5. Casos de Uso y Seguridad -->
+        <section class="memoria-section">
+          <h3 class="memoria-section-title"><span>05</span> Casos de Uso, Seguridad y Suite de Pruebas (QA)</h3>
+          <ul class="modal-highlights">
+            <li><strong>Flujo Reactivo de OKRs (PATCH):</strong> Al mover un slider de resultado clave en React, se envía <code>PATCH /api/key-results/{id}/</code>, Django recalcula <code>OKRGoal.calculate_progress()</code> en base de datos y actualiza el porcentaje global en tiempo real.</li>
+            <li><strong>Seguridad &amp; RGPD:</strong> Contraseñas cifradas con <strong>PBKDF2 + SHA256</strong>, protección frente a inyección SQL vía ORM parametrizado, prevención XSS/CSRF, variables de entorno seguras y soporte de portabilidad/derecho al olvido.</li>
+            <li><strong>Suite de 11/11 Tests Automatizados (<code>unittest</code>):</strong> Verificación automatizada de autenticación por token, permisos RBAC entre roles, cálculo ponderado de OKRs y alcances analíticos diferenciados por perfil.</li>
+          </ul>
+        </section>
+
+        <div class="modal-tech-stack">
+          <span><i class="devicon-python-plain colored"></i> Python 3.13</span>
+          <span><i class="devicon-django-plain"></i> Django 5 &amp; DRF</span>
+          <span><i class="devicon-react-original colored"></i> React 18</span>
+          <span><i class="devicon-vitejs-plain colored"></i> Vite 6</span>
+          <span><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+          <span><i class="devicon-docker-plain colored"></i> Docker Compose</span>
+          <span>Render Cloud</span>
+          <span>11/11 Tests QA</span>
+        </div>
+      </div>
+
+      <div class="modal-footer" style="gap: 0.75rem; flex-wrap: wrap;">
         <a href="https://talentpulse-frontend-9p4e.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          Abrir Web Desplegada
+          <span>Abrir Web en Producción</span>
+          <svg class="btn-icon-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clip-rule="evenodd"/></svg>
         </a>
         <a href="https://github.com/IrisChaConRomero/TalentPulse" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
-          <i class="devicon-github-original"></i> Ver Código en GitHub
+          <i class="devicon-github-original"></i>
+          <span>Ver en GitHub</span>
         </a>
       </div>
+    </div>
+  </div>
+
+  <!-- ===== VISOR DE FOTOGRAFÍA AMPLIADA ===== -->
+  <div class="photo-lightbox" id="photo-lightbox" aria-hidden="true" title="Haz clic para volver al tamaño normal">
+    <div class="photo-lightbox-frame">
+      <img src="iris_perfil_real.jpg" alt="Iris Chacón Romero — Full Stack Developer" class="photo-lightbox-img" />
     </div>
   </div>
 

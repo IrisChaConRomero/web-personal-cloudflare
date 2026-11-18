@@ -298,5 +298,50 @@
     });
   }
 
+  /* ──────────────────────────────────────────
+     9. AMPLIAR FOTOGRAFÍA DE PERFIL AL HACER CLIC
+  ────────────────────────────────────────── */
+  const photoTrigger  = document.getElementById('profile-photo-trigger');
+  const photoLightbox = document.getElementById('photo-lightbox');
+
+  function openPhotoLightbox() {
+    if (!photoLightbox) return;
+    photoLightbox.classList.add('active');
+    photoLightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePhotoLightbox() {
+    if (!photoLightbox) return;
+    photoLightbox.classList.remove('active');
+    photoLightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  if (photoTrigger && photoLightbox) {
+    photoTrigger.addEventListener('click', () => {
+      if (photoLightbox.classList.contains('active')) {
+        closePhotoLightbox();
+      } else {
+        openPhotoLightbox();
+      }
+    });
+
+    photoTrigger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openPhotoLightbox();
+      }
+    });
+
+    photoLightbox.addEventListener('click', closePhotoLightbox);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && photoLightbox.classList.contains('active')) {
+        closePhotoLightbox();
+      }
+    });
+  }
+
 })();
 
